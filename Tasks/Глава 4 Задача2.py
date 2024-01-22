@@ -14,13 +14,15 @@ def backtrack(nums, current, results):
                 current.append(num)
                 backtrack(nums, current, results)
                 current.pop()
-
-# Чтение списка целых чисел из строки ввода
-nums = list(map(int, input().strip('[ ]').split(',')))
-
-# Генерация всех возможных перестановок
-permutations = permute(nums)
-
-# Вывод результатов
-for p in permutations:
-    print(p)
+def main():
+    # Чтение списка целых чисел из строки ввода
+    nums = list(map(int, input().strip().split()))
+    
+    # Генерация всех возможных перестановок
+    permutations = permute(nums)
+    
+    # Вывод результатов
+    for p in permutations:
+        print(p)
+if __name__ == "__main__":
+    main()
