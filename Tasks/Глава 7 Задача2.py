@@ -10,8 +10,9 @@ def roman_to_arabic(s):
 
     return result
 
-
-
-s = "MCMXCIV"
-result = roman_to_arabic(s)
-print(result)
+def main():
+    s = input()
+    result = roman_to_arabic(s)
+    print(result)
+if __name__ == "__main__":
+    main()
