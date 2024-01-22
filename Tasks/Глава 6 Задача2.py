@@ -18,7 +18,10 @@ def Podmojistvo(nums):
 
     return count, subsets
 
-list = [1, 2, 3, 4]
-count, subsets = Podmojistvo(list)
-print("Подмножества:", subsets)
-print("Количество подмножеств:", count)
+def main():
+    list = [1, 2, 3, 4]
+    count, subsets = Podmojistvo(list)
+    print("Подмножества:", subsets)
+    print("Количество подмножеств:", count)
+if __name__ == "__main__":
+    main()
