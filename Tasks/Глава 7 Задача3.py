@@ -17,7 +17,8 @@ def get_pins(observed):
         combinations = new_combinations
 
     return combinations
-
-# Примеры использования
-print(get_pins("8"))  # ['5', '7', '8', '9', '0']
-print(get_pins("11"))  # ["11", "22", "44", "12", "21", "14", "41", "24", "42"]
+def main():
+    a = input()
+    print(get_pins(a))
+if __name__ == "__main__":
+    main()
