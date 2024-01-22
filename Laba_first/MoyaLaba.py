@@ -11,6 +11,7 @@ def Isheyka(colvo,ishem,poluchaem):
     Isheyka(colvo + 1, ishem + int(kucha[colvo]), poluchaem+'+'+str(kucha[colvo]))
     Isheyka(colvo + 1, ishem - int(kucha[colvo]), poluchaem+'-'+str(kucha[colvo]))
 
+
 #Присваиваем переменным значения из файла
 with open('input.txt', "r") as file:
     Vse = file.readline().strip().split()
@@ -31,7 +32,9 @@ if N >= 2 and N <= 30 and S >= -10**9 and S <= 10**9:
 else:
     resultat = 'No solution'
 
-
-#Запись руезльтата в файл
-with open("output.txt", "w") as file:
-        file.write(resultat)
+def main():
+    #Запись руезльтата в файл
+    with open("output.txt", "w") as file:
+            file.write(resultat)
+if __name__ == "__main__":
+    main()
