@@ -14,11 +14,13 @@ def group_strings(strings):
     return result
 
 # Примеры использования
-
-strings = ["qwe", "ewq", "asd", "dsa", "dsas", "qwee", "zxc", "cxz", "xxz", "z", "s", "qweasdzxc", "zzxc"]
-output = group_strings(strings)
-print(output)
-
-strings = ["a", "a", ""]
-output = group_strings(strings)
-print(output)
+def main():
+    strings = ["qwe", "ewq", "asd", "dsa", "dsas", "qwee", "zxc", "cxz", "xxz", "z", "s", "qweasdzxc", "zzxc"]
+    output = group_strings(strings)
+    print(output)
+    
+    strings = ["a", "a", ""]
+    output = group_strings(strings)
+    print(output)
+if __name__ == "__main__":
+    main()
