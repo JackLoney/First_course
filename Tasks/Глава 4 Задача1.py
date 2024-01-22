@@ -24,15 +24,16 @@ def find_closest_sum(nums, target):
     return closest_combination
 
 
-
-n = int(input("Введите количество элементов в списке: "))
-nums = list(map(int, input("Введите целочисленный список длины N: ").split()))
-target = int(input("Введите цель: "))
-
-result = find_closest_sum(nums, target)
-if result:
-    print(result)
-    print(sum(result))
-else:
-    print("Нет комбинации чисел, близкой к цели")
-
+def main():
+    n = int(input("Введите количество элементов в списке: "))
+    nums = list(map(int, input("Введите целочисленный список длины N: ").split()))
+    target = int(input("Введите цель: "))
+    
+    result = find_closest_sum(nums, target)
+    if result:
+        print(result)
+        print(sum(result))
+    else:
+        print("Нет комбинации чисел, близкой к цели")
+if __name__ == "__main__":
+    main()
