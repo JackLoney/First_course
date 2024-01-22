@@ -25,7 +25,9 @@ def spiralka(matrix):
             left += 1
 
     return result
-
-matrix = [[1,2,3],[4,5,6],[7,8,9]]
-output = spiralka(matrix)
-print(output)
+def main():
+    matrix = [[1,2,3],[4,5,6],[7,8,9]]
+    output = spiralka(matrix)
+    print(output)
+if __name__ == "__main__":
+    main()
