@@ -19,12 +19,17 @@ def analyze_lists(list1, list2):
     for j in b:    
         if j not in a:
             lishnie.append(j)
+            
     for i in obshie:
         a.remove(i)
         b.remove(i)      
     return obshie, lishnie, a, b
-list1 = [1, 2, 3, 4, 5]
-list2 = [4, 5, 6, 7, 8]
 
-result = analyze_lists(list1, list2)
-print(result) 
+def main():
+    list1 = [1, 2, 3, 4, 5]
+    list2 = [4, 5, 6, 7, 8]
+    
+    result = analyze_lists(list1, list2)
+    print(result) 
+if __name__ == "__main__":
+    main()
