@@ -35,13 +35,22 @@ def longest_valid_substring(s):
             start = i + 1
 
     return longest_substring if longest_substring else False
-
-s = input("Введите строку скобок: ")
-if check_brackets(s):
-        print("True")
-else:
-    longest_substring = longest_valid_substring(s)
-    if longest_substring:
-        print(longest_substring)
+def main():
+    s = input("Введите строку скобок: ")
+    if check_brackets(s):
+            print("True")
     else:
-        print("False")
+        longest_substring = longest_valid_substring(s)
+        if longest_substring:
+            print(longest_substring)
+        else:
+            print("False")
+def reverse_word_order(string):
+    # Разделение строки на список слов и удаление пустых элементов
+    words = string.split()
+    # Обратное упорядочивание списка слов и объединение в строку через пробел
+    reversed_string = ' '.join(words[::-1])
+    reversed_string = reversed_string.capitalize()
+    return reversed_string
+if __name__ == "__main__":
+    main()
