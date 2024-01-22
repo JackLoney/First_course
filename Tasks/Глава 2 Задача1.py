@@ -18,5 +18,8 @@ def longest_substring(string):
 
     return print(longest)
 
-Slovo = input()
-longest_substring(Slovo)
+def main():
+    Slovo = input()
+    longest_substring(Slovo)
+if __name__ == "__main__":
+    main()
