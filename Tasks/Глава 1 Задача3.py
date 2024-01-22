@@ -23,7 +23,6 @@ def print_zigzag(string, rows):
     
     return ''.join([''.join(row) for row in zigzag]), zigzag # Объединяем все строки в одну строку
 
-# Пример использования
 input_string, num_rows = map(str, input().split())
 num_rows = int(num_rows)
 result = print_zigzag(input_string, num_rows)
