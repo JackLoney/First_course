@@ -6,7 +6,8 @@ def reverse_word_order(string):
     reversed_string = reversed_string.capitalize()
     return reversed_string
 
-# Примеры использования
-print(reverse_word_order("пРиВет мИР"))       # Output: "Мир привет"
-print(reverse_word_order("  it       was     cool     "))  # Output: "Cool was it"
-print(reverse_word_order("good"))             # Output: "Good"
+def main():
+    a = input()
+    print(reverse_word_order(a))
+if __name__ == "__main__":
+    main()
