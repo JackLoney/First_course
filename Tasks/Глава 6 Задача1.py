@@ -5,25 +5,25 @@ def analyze_lists(list1, list2):
         a.append(i)
     for j in list2:
         b.append(j)
-    obshie = []
-    lishnie = []
+    common = []
+    extra = []
     for i in a:
         for j in b:
             if i == j:
-                obshie.append(i)
+                common.append(i)
                 break
     for i in a:
         if i not in b:
-            lishnie.append(i)
+            extra.append(i)
 
     for j in b:    
         if j not in a:
-            lishnie.append(j)
+            extra.append(j)
             
-    for i in obshie:
+    for i in common:
         a.remove(i)
         b.remove(i)      
-    return obshie, lishnie, a, b
+    return common, extra, a, b
 
 def main():
     list1 = [1, 2, 3, 4, 5]
