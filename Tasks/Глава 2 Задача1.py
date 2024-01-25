@@ -1,25 +1,25 @@
 def longest_substring(string):
     # Инициализируем переменные
     longest = ""
-    zapomnim = ""
+    remember = ""
 
     # Проходимся по каждому символу в строке
-    for bukva in string:
-        # Если символ уже встречался, обновляем zapomnim
-        if bukva in zapomnim:
-            zapomnim = zapomnim[zapomnim.index(bukva) + 1:]
+    for letter in string:
+        # Если символ уже встречался, обновляем remember
+        if letter in remember:
+            remember = remember[remember.index(letter) + 1:]
 
-        # Добавляем текущий символ в zapomnim
-        zapomnim += bukva
+        # Добавляем текущий символ в remember
+        remember += letter
 
-        # Обновляем longest, если zapomnim длиннее
-        if len(zapomnim) > len(longest):
-            longest = zapomnim
+        # Обновляем longest, если remember длиннее
+        if len(remember) > len(longest):
+            longest = remember
 
     return print(longest)
 
 def main():
-    Slovo = input()
-    longest_substring(Slovo)
+    Word = input()
+    longest_substring(Word)
 if __name__ == "__main__":
     main()
