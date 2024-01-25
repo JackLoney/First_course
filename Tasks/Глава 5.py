@@ -3,29 +3,29 @@ def main():
     a = []
     b = []
     for _ in range(k):
-        Nazvanie = input('Введите название банка: ')
-        Dengi = int(input('Кол-во денег: '))
-        Sbornik = (Nazvanie, Dengi)
+        Name_bank = input('Введите название банка: ')
+        Money = int(input('Кол-во денег: '))
+        Collection_Bank = (Nazvanie, Dengi)
         b.append(Sbornik)
         a.append(Dengi)
     
-    #Banki = ''
-    # indexovka = ''
+    #Bank = ''
+    # index_b = ''
     if a[0] > a[1]:
         a[1] = a[0]
         # indexovka=0
-        #  Banki = Banki+str(b[indexovka])
+        #  Bank = Bank+str(b[index_b])
     for i in range(2, k):
         if a[i] + a[i-2]>a[i-1]:
             a[i] = a[i]+a[i-2]
-            # Banki.replace(b[indexovka],'')
-            # indexovka = i
-            # Banki = Banki + str(b[indexovka])
+            # Bank.replace(b[index_b],'')
+            # index_b = i
+            # Bank = Bank + str(b[index_b])
     
         else:
             a[i] = a[i-1]
-            # Banki = Banki[:-1]
-            # Banki = Banki + str(b[indexovka])
+            # Bank = Bank[:-1]
+            # Bank = Bank + str(b[index_b])
     print(b, max(a))
 if __name__ == "__main__":
     main()
