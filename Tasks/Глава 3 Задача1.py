@@ -1,4 +1,4 @@
-def spiralka(matrix):
+def Spiral(matrix):
     if not matrix:
         return []
     result = []
@@ -28,7 +28,7 @@ def spiralka(matrix):
     
 def main():
     matrix = [[1,2,3],[4,5,6],[7,8,9]]
-    output = spiralka(matrix)
+    output = Spiral(matrix)
     print(output)
 if __name__ == "__main__":
     main()
