@@ -1,4 +1,4 @@
-def Podmojistvo(nums):
+def Subset_main(nums):
     n = len(nums)
     count = 0
     subsets = []
@@ -20,7 +20,7 @@ def Podmojistvo(nums):
 
 def main():
     list = [1, 2, 3, 4]
-    count, subsets = Podmojistvo(list)
+    count, subsets = Subset_main(list)
     print("Подмножества:", subsets)
     print("Количество подмножеств:", count)
 if __name__ == "__main__":
