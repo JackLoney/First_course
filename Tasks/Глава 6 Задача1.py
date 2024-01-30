@@ -1,35 +1,23 @@
 def analyze_lists(list1, list2):
-    a=[]
-    b=[]
-    for i in list1:
-        a.append(i)
-    for j in list2:
-        b.append(j)
-    common = []
-    extra = []
-    for i in a:
-        for j in b:
-            if i == j:
-                common.append(i)
-                break
-    for i in a:
-        if i not in b:
-            extra.append(i)
 
-    for j in b:    
-        if j not in a:
-            extra.append(j)
-            
-    for i in common:
-        a.remove(i)
-        b.remove(i)      
-    return common, extra, a, b
+    common = list(set(list1) & set(list2))
+    
+    extra = list(set(list1) ^ set(list2))
+
+    Extraction_list1 = list(set(list1) - set(list2))
+
+    Extraction_list2 = list(set(list2) - set(list1))
+
+    return common, extra, Extraction_list1, Extraction_list2
 
 def main():
     list1 = [1, 2, 3, 4, 5]
     list2 = [4, 5, 6, 7, 8]
     
-    result = analyze_lists(list1, list2)
-    print(result) 
+    a, b, c, d = analyze_lists(list1, list2)
+    print('Количество элементов, присутствующих в обоих списках', len(a),':', a)
+    print('Количество элементов, присутствующих только в одном списке', len(b),':', b) 
+    print('Количество оставшихся элементов в list1 после извлечения элементов из list2', len(c),':', c)
+    print('Количество оставшихся элементов в list2 после извлечения элементов из list1', len(d),':', d)
 if __name__ == "__main__":
     main()
