@@ -44,22 +44,22 @@ if __name__ == '__main__':
     
     def onCheckClicked(label):
         global tangent_flag
-        ''' !!! Обработчик события при клике по CheckButtons'''
+        # Обработчик события при клике по CheckButtons
         if label == 'Касательная':
             tangent_flag = not tangent_flag
         updateGraph()
 
     def ButtonsClicked(label):
-        '''Обработчик события при клике по Button'''
+        # Обработчик события при клике по Button
         slider_sigma.set_val(0)
         updateGraph()
 
     def onRadioButtonsClicked_color(label):
-        '''Обработчик события при клике по RadioButtons'''
+        # Обработчик события при клике по RadioButtons_color
         updateGraph()
 
     def onRadioButtonsClicked_style(label):
-        '''Обработчик события при клике по RadioButtons'''
+        #Обработчик события при клике по RadioButtons_style
         updateGraph()
 
 
