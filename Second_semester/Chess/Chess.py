@@ -44,6 +44,7 @@ class CamelGameWindow(QWidget):
         self.button_show = QPushButton("Показать добавленные")
         self.button_show.clicked.connect(self.show_coordinates)
         self.button_show.setEnabled(False)
+        
         # Поле для ввода необходимых фигур на доске
         self.label_required_figures = QLabel("Фигуры которые необходимо поставить:")
         self.spin_required_figures = QSpinBox()
